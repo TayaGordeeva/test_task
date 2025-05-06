@@ -6,9 +6,10 @@ task.cpp - основной код, в нем представлена реал�
 test.cpp - Google тесты на проверку корректности работы программы при разных вводных данных
 
 Пример запуска:
-1. `cmake -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S task -B task\build`
-2. `cmake --build task\build --target task -j 10`
-3. task.exe
+1. mkdir build, cd build
+2. cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug ..
+3. cmake --build . --target tests -j 10
+4. task.exe ../file.txt
 
 Инструкция:
 1. запуск cmake
